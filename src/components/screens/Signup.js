@@ -41,7 +41,8 @@ const Signup = ()=>{
     fetch("/signup",{
       method:"post",
       headers:{
-        "Content-Type":"application/json"
+        "Content-Type":"application/json",
+        'Accept': 'application/json'
       },
       body:JSON.stringify({
         name,
