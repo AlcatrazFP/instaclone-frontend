@@ -6,7 +6,7 @@ import M from 'materialize-css'
 
 const SignIn = ()=>{
 
-  const {state,dispatch} = useContext(UserContext)
+  const {dispatch} = useContext(UserContext)
   const navigate = useNavigate()
   const [password,setPassword] = useState("")
   const [email,setEmail] = useState("")
