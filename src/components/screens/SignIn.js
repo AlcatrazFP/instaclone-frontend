@@ -25,7 +25,7 @@ const SignIn = ()=>{
         password,
         email
       })
-    }).then(res=>res.json())
+    }).then(res=>res.text())
     .then(data=>{
       console.log(data)
       if(data.error){

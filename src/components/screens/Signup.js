@@ -50,7 +50,7 @@ const Signup = ()=>{
         email,
         pic:url
       })
-    }).then(res=>res.json())
+    }).then(res=>res.text())
     .then(data=>{
       if(data.error){
         M.toast({html: data.error, classes:"#c62828 red darken-3"})
