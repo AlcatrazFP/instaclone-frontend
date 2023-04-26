@@ -17,8 +17,11 @@ const Routing = ()=>{
   const navigate = useNavigate()
   const {dispatch} = useContext(UserContext)
   useEffect(()=>{
+    if(localStorage.getItem("user")==null||localStorage.getItem("user")==undefined){
+      return;
+    }
     const user = JSON.parse(localStorage.getItem("user"))
-    // console.log(typeof(user),user)
+    console.log(typeof(user),user)
     
     if(user){
       dispatch({type:"USER", payload:user})
