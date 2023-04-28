@@ -20,7 +20,7 @@ const Routing = ()=>{
     console.log(localStorage.getItem("user"))
     if(localStorage.getItem("user")===null||localStorage.getItem("user")===undefined){
         console.log('sending u here');
-      navigate('https://instaclone1-eu20.onrender.com/signin')
+      navigate('/signin')
       return;
     }
     const user = JSON.parse(localStorage.getItem("user"))

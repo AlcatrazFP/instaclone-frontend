@@ -10,7 +10,7 @@ const Profile = ()=>{
   const [showfollow,setShowFollow] = useState(state?!state.following.includes(userid):true)
   // console.log(userid)
   useEffect(()=>{
-    fetch(`https://instaclone1-eu20.onrender.com/user/${userid}`,{
+    fetch(`https://instaclone-9g3i.onrender.com/user/${userid}`,{
       headers:{
         "Authorization":"Bearer "+localStorage.getItem("jwt")
       }
@@ -25,7 +25,7 @@ const Profile = ()=>{
 
 
  const followUser = () =>{
-   fetch('https://instaclone1-eu20.onrender.com/follow',{
+   fetch('https://instaclone-9g3i.onrender.com/follow',{
      method:"PUT",
      headers:{
        "Content-Type":"application/json",
@@ -54,7 +54,7 @@ const Profile = ()=>{
  }
 
  const unfollowUser = () =>{
-  fetch('https://instaclone1-eu20.onrender.com/unfollow',{
+  fetch('https://instaclone-9g3i.onrender.com/unfollow',{
     method:"PUT",
     headers:{
       "Content-Type":"application/json",
