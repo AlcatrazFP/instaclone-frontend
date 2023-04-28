@@ -6,7 +6,7 @@ const Home = ()=>{
   const [data,setData] = useState([])
   const {state} = useContext(UserContext)
   useEffect(()=>{
-    fetch('/getsubpost',{
+    fetch('https://instaclone1-eu20.onrender.com/getsubpost',{
       headers:{
         "Authorization":"Bearer "+localStorage.getItem("jwt")
       }
@@ -19,7 +19,7 @@ const Home = ()=>{
   })
 
   const likePost =(id)=>{
-       fetch('/like',{
+       fetch('https://instaclone1-eu20.onrender.com/like',{
          method:"put",
          headers:{
            "Content-Type":"application/json",
@@ -45,7 +45,7 @@ const Home = ()=>{
   }
 
   const unlikePost =(id)=>{
-    fetch('/unlike',{
+    fetch('https://instaclone1-eu20.onrender.com/unlike',{
       method:"put",
       headers:{
         "Content-Type":"application/json",
@@ -71,7 +71,7 @@ const Home = ()=>{
 }
 
   const makeComment = (text,postId) =>{
-      fetch('/comment',{
+      fetch('https://instaclone1-eu20.onrender.com/comment',{
         method:"put",
         headers:{
           "Content-Type":"application/json",
@@ -98,7 +98,7 @@ const Home = ()=>{
   }
 
   const deletePost = (postid)=>{
-    fetch(`/deletepost/${postid}`,{
+    fetch(`https://instaclone1-eu20.onrender.com/deletepost/${postid}`,{
       method:"delete",
       headers:{
         Authorization:"Bearer "+localStorage.getItem("jwt")

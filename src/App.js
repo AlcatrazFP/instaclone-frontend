@@ -17,7 +17,10 @@ const Routing = ()=>{
   const navigate = useNavigate()
   const {dispatch} = useContext(UserContext)
   useEffect(()=>{
-    if(localStorage.getItem("user")==null||localStorage.getItem("user")==undefined){
+    console.log(localStorage.getItem("user"))
+    if(localStorage.getItem("user")===null||localStorage.getItem("user")===undefined){
+        console.log('sending u here');
+      navigate('https://instaclone1-eu20.onrender.com/signin')
       return;
     }
     const user = JSON.parse(localStorage.getItem("user"))
@@ -28,7 +31,6 @@ const Routing = ()=>{
       // navigate('/')
     }
     else{
-      navigate('/signin')
     }
   },[])
   return (

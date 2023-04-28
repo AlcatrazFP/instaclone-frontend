@@ -8,7 +8,7 @@ const Profile = ()=>{
   const [image,setImage] = useState("")
   // const [url,setUrl] = useState("")
   useEffect(()=>{
-    fetch('/mypost',{
+    fetch('https://instaclone1-eu20.onrender.com/mypost',{
       headers:{
         "Authorization":"Bearer "+localStorage.getItem("jwt")
       }
@@ -33,7 +33,7 @@ const Profile = ()=>{
       // setUrl(data.url)
       // console.log(data)
       // dispatch({type:"UPDATEPIC",payload:data.url})
-      fetch('/updatepic',{
+      fetch('https://instaclone1-eu20.onrender.com/updatepic',{
         method:"PUT",
         headers:{
           "Content-Type":"application/json",
